@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => 'Laravel Shop',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>Laravel</b> shop',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>LS</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -57,14 +57,13 @@ return [
     |
     */
     'route' => [
-
+        // 路由前缀
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
-
+        // 控制器命名空间前缀
         'namespace' => 'App\\Admin\\Controllers',
-
+        // 默认中间件列表
         'middleware' => ['web', 'admin'],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Laravel-admin install directory
@@ -85,7 +84,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => 'Admin',
+    'title' => 'Laravel Shop 管理后台',
 
     /*
     |--------------------------------------------------------------------------
@@ -112,7 +111,7 @@ return [
 
         'controller' => App\Admin\Controllers\AuthController::class,
 
-        'guard' => 'admin',
+        // 'guard' => 'admin',
 
         'guards' => [
             'admin' => [
@@ -138,7 +137,7 @@ return [
         'excepts' => [
             'auth/login',
             'auth/logout',
-            '_handle_action_',
+            // '_handle_action_',
         ],
     ],
 
